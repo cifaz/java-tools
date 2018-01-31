@@ -26,11 +26,10 @@
 
     <developers>
         <developer>
-            <name>ccz</name>
+            <name>hanlin2531</name>
             <email>hanlin2531@163.com</email>
-            <roles>
-                <role>developer</role>
-            </roles>
+            <organization>cifaz</organization>
+            <organizationUrl>http://cifaz.com</organizationUrl>
             <timezone>+8</timezone>
         </developer>
     </developers>
@@ -156,11 +155,11 @@
                         </executions>
                     </plugin>
 
-                    <plugin>
+                    <!--<plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-release-plugin</artifactId>
                         <version>2.5.3</version>
-                    </plugin>
+                    </plugin>-->
 
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
@@ -202,7 +201,7 @@
         <repository>
             <id>releases</id>
             <name>Maven Central Staging Repository</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
         </repository>
     </distributionManagement>
 </project>
