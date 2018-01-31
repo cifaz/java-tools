@@ -117,7 +117,7 @@
             <id>release</id>
             <build>
                 <plugins>
-                    <plugin>
+                    <!--<plugin>
                         <groupId>org.sonatype.plugins</groupId>
                         <artifactId>nexus-staging-maven-plugin</artifactId>
                         <extensions>true</extensions>
@@ -126,7 +126,7 @@
                             <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                             <autoReleaseAfterClose>true</autoReleaseAfterClose>
                         </configuration>
-                    </plugin>
+                    </plugin>-->
 
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
