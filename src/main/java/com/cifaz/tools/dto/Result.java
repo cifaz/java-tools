@@ -32,7 +32,7 @@ public class Result<T> extends BaseResult {
     }
 
     public Result<T> fail(String code) {
-        this.fail(code, (String) null);
+        this.fail(code, null);
         return this;
     }
 
