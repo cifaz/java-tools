@@ -8,9 +8,8 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JsonSerializer;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializerProvider;
+import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -72,7 +71,6 @@ public class JsonUtil {
             JsonParser parser = (new ObjectMapper()).getFactory().createParser(json);
 
             while (parser.nextToken() != null) {
-                ;
             }
 
             valid = true;
@@ -85,7 +83,7 @@ public class JsonUtil {
     }
 
     static {
-        OBJECT_MAPPER.getSerializationConfig().withSerializationInclusion(JsonInclude.Include.NON_NULL);
+        OBJECT_MAPPER.setSerializationInclusion(JsonInclude.Include.NON_NULL);
         OBJECT_MAPPER.configure(FAIL_ON_UNKNOWN_PROPERTIES, false);
         OBJECT_MAPPER.getSerializerProvider().setNullKeySerializer(new JsonSerializer<Object>() {
             public void serialize(Object paramT, JsonGenerator paramJsonGenerator, SerializerProvider paramSerializerProvider) throws IOException, JsonProcessingException {
