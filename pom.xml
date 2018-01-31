@@ -18,9 +18,9 @@
     </licenses>
 
     <scm>
-        <connection>scm:git:git@github.com:cifaz/java-tools.git</connection>
-        <developerConnection>scm:git:git@github.com:cifaz/java-tools.git</developerConnection>
-        <url>git@github.com:cifaz/java-tools.git</url>
+        <connection>scm:git:https://github.com/cifaz/java-tools.git</connection>
+        <developerConnection>scm:git:https://github.com/cifaz/java-tools.git</developerConnection>
+        <url>https://github.com/cifaz/java-tools</url>
         <tag>${project.version}</tag>
     </scm>
 
